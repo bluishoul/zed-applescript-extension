@@ -5,6 +5,7 @@ line_comments = ["-- ", "# "]
 block_comment = ["(* ", " *)"]
 autoclose_before = ",.;:})]"
 word_characters = ["_"]
+first_line_pattern = '^#!.*\bosascript\b'
 
 [[brackets]]
 start = "("

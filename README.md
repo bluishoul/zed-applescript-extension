@@ -23,6 +23,9 @@ grammar.
   counterpart; pairs are highlighted when your cursor is next to them.
 - **Line & block comments** — `cmd-/` toggles `--` comments; `(* … *)` block
   comments are also recognised.
+- **Shebang detection** — files that start with `#!/usr/bin/osascript` or
+  `#!/usr/bin/env osascript` are recognised as AppleScript even without a
+  `.applescript` / `.scpt` extension.
 
 For the complete feature landscape — what's shipped, what's planned, what's
 being considered, and what's deliberately out of scope — see **[FEATURES.md](./FEATURES.md)**.
@@ -52,8 +55,15 @@ To update the extension after pulling new commits, run
 | `.scpt`         | AppleScript |
 | `.scptd`        | AppleScript |
 
-If you'd like suffix-less `#!/usr/bin/osascript` scripts to be detected too,
-that's on the roadmap — see [FEATURES.md](./FEATURES.md).
+Suffix-less scripts whose first line is an `osascript` shebang — e.g.
+`#!/usr/bin/osascript` or `#!/usr/bin/env osascript` — are also detected as
+AppleScript.
+
+> **Note on JXA.** `osascript` can run JavaScript for Automation (JXA) when
+> invoked with `-l JavaScript`. Because the shebang rule matches any line
+> containing `osascript`, a JXA script with such a shebang will currently be
+> recognised as AppleScript too. If you hit this, set the language explicitly
+> from the status bar or give the file a `.js` extension.
 
 ## Reporting issues
 

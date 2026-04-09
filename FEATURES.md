@@ -34,6 +34,7 @@ Everything in this section works in the installed extension today.
 | Auto-indent | Indents inside `tell`, `if`, `repeat` (all variants), `try`, `considering`, `ignoring`, `with timeout`, `with transaction`, `on` (handler), and `script` blocks. Dedents on `end` / `else`. |
 | Outline navigation | `cmd-shift-O` lists every handler, script object, and top-level `property` declaration. |
 | Rainbow brackets | Compatible with Zed's rainbow bracket rendering. |
+| Shebang detection | Files starting with `#!/usr/bin/osascript` or `#!/usr/bin/env osascript` are recognised as AppleScript without needing a file extension. See caveat on JXA in the README. |
 
 ---
 
@@ -45,7 +46,6 @@ land soon.
 | Feature | What you'll get | Notes |
 | --- | --- | --- |
 | Language injections | Bash highlighting inside `do shell script "…"`, JavaScript highlighting inside `do JavaScript "…"`. | `injections.scm` |
-| Shebang detection | Files starting with `#!/usr/bin/osascript` (no extension) are recognised as AppleScript. | `config.toml` `first_line_pattern` |
 | Smarter string/comment behaviour | Auto-close and completion are suppressed inside strings and comments. | `overrides.scm` |
 | Text objects (vim mode) | `vaf` / `daf` select an entire handler; similar for script objects and repeat blocks. | `textobjects.scm` |
 | Example scripts | A small corpus of real AppleScript snippets used for highlight regression testing. | `examples/` |
