@@ -26,6 +26,15 @@ grammar.
 - **Shebang detection** — files that start with `#!/usr/bin/osascript` or
   `#!/usr/bin/env osascript` are recognised as AppleScript even without a
   `.applescript` / `.scpt` extension.
+- **Run from the editor** — three built-in tasks (open the command palette
+  and search for "task: spawn", or press `cmd-shift-R` on the default
+  bindings):
+  - **osascript: run current file** — executes the current buffer with
+    `osascript` and shows the output in the terminal panel.
+  - **osacompile: check syntax of current file** — compiles the current
+    buffer with `osacompile` to `/dev/null`, reporting any syntax errors.
+  - **osascript: evaluate selection** — runs whatever you've selected with
+    `osascript -e`. Handy for quick one-liners.
 
 For the complete feature landscape — what's shipped, what's planned, what's
 being considered, and what's deliberately out of scope — see **[FEATURES.md](./FEATURES.md)**.

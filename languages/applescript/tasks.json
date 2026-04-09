@@ -1,0 +1,23 @@
+[
+  {
+    "label": "osascript: run current file",
+    "command": "osascript",
+    "args": ["$ZED_FILE"],
+    "reveal": "always",
+    "tags": ["applescript-run"]
+  },
+  {
+    "label": "osacompile: check syntax of current file",
+    "command": "osacompile",
+    "args": ["-o", "/dev/null", "$ZED_FILE"],
+    "reveal": "always",
+    "tags": ["applescript-compile"]
+  },
+  {
+    "label": "osascript: evaluate selection",
+    "command": "osascript",
+    "args": ["-e", "$ZED_SELECTED_TEXT"],
+    "reveal": "always",
+    "tags": ["applescript-eval-selection"]
+  }
+]
