@@ -1,0 +1,11 @@
+id = "applescript"
+name = "AppleScript"
+description = "AppleScript language support for Zed"
+version = "0.0.1"
+schema_version = 1
+authors = ["Bluishoul"]
+repository = "https://github.com/bluishoul/zed-applescript-extension"
+
+[grammars.applescript]
+repository = "https://github.com/waddie/tree-sitter-applescript"
+rev = "adff3f4de87033350050232c8dd23947c7b34850"
