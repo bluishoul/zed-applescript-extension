@@ -9,6 +9,11 @@
 ; Linked to the "osascript: run current file" task via the `applescript-run`
 ; tag defined in tasks.json.
 
+; File-level anchor — ensures even handler-less scripts (pure top-level
+; statements) get a ▶ button near the top of the file.
+((source_file) @run
+  (#set! tag applescript-run))
+
 ((simple_handler
   name: (identifier) @run) @_def
   (#set! tag applescript-run))
