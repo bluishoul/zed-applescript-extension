@@ -35,6 +35,11 @@ grammar.
     buffer with `osacompile` to `/dev/null`, reporting any syntax errors.
   - **osascript: evaluate selection** — runs whatever you've selected with
     `osascript -e`. Handy for quick one-liners.
+- **Inline ▶ run button** — a run button appears in the gutter next to every
+  top-level handler and `script` block definition. Clicking it runs the
+  whole file with `osascript` (AppleScript doesn't support running an
+  isolated handler, so the button is a convenient click target rather than
+  a per-handler trigger).
 
 For the complete feature landscape — what's shipped, what's planned, what's
 being considered, and what's deliberately out of scope — see **[FEATURES.md](./FEATURES.md)**.

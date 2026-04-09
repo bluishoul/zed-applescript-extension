@@ -37,6 +37,7 @@ Everything in this section works in the installed extension today.
 | Shebang detection | Files starting with `#!/usr/bin/osascript` or `#!/usr/bin/env osascript` are recognised as AppleScript without needing a file extension. See caveat on JXA in the README. |
 | Example scripts | A small `examples/` corpus covering basics, Finder automation, script objects, shell/JavaScript escape hatches, and shebang detection — useful as highlight regression fixtures and as reading material. |
 | Run / compile tasks | Three built-in Zed tasks: run the current file with `osascript`, syntax-check with `osacompile`, and evaluate the current selection with `osascript -e`. Accessible via `task: spawn`. |
+| Inline ▶ run button | A gutter run button appears next to every top-level handler and `script` block definition; clicking it runs the whole file via `osascript`. Powered by `runnables.scm` + the `applescript-run` task tag. |
 
 ---
 
@@ -62,7 +63,6 @@ promote anything here into **Planned**.
 
 | Feature | What it would give you | Caveats |
 | --- | --- | --- |
-| Inline ▶ runnables per handler | A run button next to each handler definition. | Requires deciding how a single handler should be invoked — wrapping with a synthetic `run` block is non-trivial. |
 | Diagnostics via `osacompile` | Red squiggles for syntax errors, powered by shelling out to `osacompile -o /dev/null` and parsing its stderr. | Requires shipping a Rust + WASM extension crate. Doable, but a significant step up in complexity from the current pure-query extension. |
 | File / tab icon | A dedicated AppleScript icon in the file tree and tab bar. | In Zed, file icons belong to *icon theme* extensions, not language extensions. Would need a separate icon-theme contribution. |
 | Snippets (`tell application`, `repeat with`, handler scaffolds, …) | Quick expansion of common AppleScript boilerplate. | Zed treats snippets as a separate extension type. Would likely be a sibling extension rather than part of this one. |
