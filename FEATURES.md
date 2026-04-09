@@ -35,6 +35,7 @@ Everything in this section works in the installed extension today.
 | Outline navigation | `cmd-shift-O` lists every handler, script object, and top-level `property` declaration. |
 | Rainbow brackets | Compatible with Zed's rainbow bracket rendering. |
 | Shebang detection | Files starting with `#!/usr/bin/osascript` or `#!/usr/bin/env osascript` are recognised as AppleScript without needing a file extension. See caveat on JXA in the README. |
+| Example scripts | A small `examples/` corpus covering basics, Finder automation, script objects, shell/JavaScript escape hatches, and shebang detection — useful as highlight regression fixtures and as reading material. |
 
 ---
 
@@ -48,7 +49,6 @@ land soon.
 | Language injections | Bash highlighting inside `do shell script "…"`, JavaScript highlighting inside `do JavaScript "…"`. | `injections.scm` |
 | Smarter string/comment behaviour | Auto-close and completion are suppressed inside strings and comments. | `overrides.scm` |
 | Text objects (vim mode) | `vaf` / `daf` select an entire handler; similar for script objects and repeat blocks. | `textobjects.scm` |
-| Example scripts | A small corpus of real AppleScript snippets used for highlight regression testing. | `examples/` |
 | Continuous integration | Pull request workflow that parses the example corpus with the pinned grammar, catching breakage from grammar bumps. | GitHub Actions |
 | Registry release | Publish the extension to the Zed extension registry so it installs with one click from the Extensions panel. | PR to `zed-industries/extensions` |
 

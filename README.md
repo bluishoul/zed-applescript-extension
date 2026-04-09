@@ -30,6 +30,10 @@ grammar.
 For the complete feature landscape — what's shipped, what's planned, what's
 being considered, and what's deliberately out of scope — see **[FEATURES.md](./FEATURES.md)**.
 
+A small corpus of example scripts lives in [`examples/`](./examples/) — open
+any of them in Zed after installing to see the highlighter at work on real
+AppleScript.
+
 ## Install
 
 The extension isn't in the Zed extension registry yet, so install it as a dev

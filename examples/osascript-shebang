@@ -1,0 +1,20 @@
+#!/usr/bin/env osascript
+-- This file has no extension. Zed should still recognise it as
+-- AppleScript because of the `#!/usr/bin/env osascript` shebang
+-- on the first line, thanks to `first_line_pattern` in config.toml.
+
+on run argv
+    if (count of argv) is 0 then
+        return "Usage: osascript-shebang NAME [NAME ...]"
+    end if
+
+    set lines to {}
+    repeat with name in argv
+        set end of lines to "Hello, " & (name as text) & "!"
+    end repeat
+
+    set AppleScript's text item delimiters to linefeed
+    set result to lines as text
+    set AppleScript's text item delimiters to ""
+    return result
+end run
